@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     echo "Cloning repository from GitHub..."
-                    git branch: 'main', credentialsId: 'github-token', url: 'git@github.com:shahdmohd/Weather_App.git'
+                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/shahdmohd/Weather_App.git'
                 }
             }
         }
