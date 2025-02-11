@@ -48,6 +48,8 @@ pipeline {
             steps {
                 script {
                     echo "Running Ansible Playbook..."
+                    sh "chmod 600 ./ansible/private_key_m01"
+                    sh "chmod 600 ./ansible/private_key_m02"
                     sh "ansible-playbook -i inventory playbook.yml"
 
                 }
