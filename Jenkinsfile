@@ -48,7 +48,7 @@ pipeline {
             steps {
                 script {
                     echo "Running Ansible Playbook..."
-                    sh "ansible-playbook -i inventory setup-docker.yml"
+                    sh "ansible-playbook -i inventory playbook.yml"
                 }
             }
         }
