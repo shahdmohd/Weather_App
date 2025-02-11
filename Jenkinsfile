@@ -49,7 +49,7 @@ pipeline {
                 script {
                     echo "Running Ansible Playbook..."
                     sh "ansible-playbook -i inventory playbook.yml"
-                   # sh "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i inventory playbook.yml"
+
                 }
             }
         }
