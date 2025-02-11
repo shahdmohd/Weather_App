@@ -6,6 +6,7 @@
 
     - name: Install required system packages
       apt:
+        update_cache: yes
         name:
           - ca-certificates
           - curl
