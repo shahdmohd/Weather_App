@@ -43,6 +43,15 @@ pipeline {
                 }
             }
         }
+
+        stage('Install Python Dependencies') {
+            steps {
+                script {
+                    echo "Installing Python Dependencies..."
+                    sh "sudo apt-get update && sudo apt-get install -y python3-apt"
+                }
+            }
+        }
  
         stage('Run Ansible Playbook') {
             steps {
