@@ -44,14 +44,6 @@ pipeline {
             }
         }
 
-        stage('Install Python Dependencies') {
-            steps {
-                script {
-                    echo "Installing Python Dependencies..."
-                    sh "sudo apt-get update && sudo apt-get install -y python3-apt"
-                }
-            }
-        }
  
         stage('Run Ansible Playbook') {
             steps {
@@ -59,6 +51,7 @@ pipeline {
                     echo "Running Ansible Playbook..."
                     sh "chmod 600 ./ansible/private_key_m01"
                     sh "chmod 600 ./ansible/private_key_m02"
+      		    sh "export ANSIBLE_HOST_KEY_CHECKING=False" 
                     sh "ansible-playbook -i inventory playbook.yml"
 
                 }
