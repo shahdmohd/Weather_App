@@ -10,7 +10,6 @@
           - ca-certificates
           - curl
           - gnupg
-          - python3-apt
         state: present
 
     - name: Add Docker GPG key
