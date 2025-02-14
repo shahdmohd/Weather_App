@@ -5,45 +5,38 @@
   tasks:
 
     - name: Install required system packages
-      apt:
+      yum:
         name:
+          - yum-utils
+          - device-mapper-persistent-data
+          - lvm2
           - ca-certificates
           - curl
-          - gnupg
         state: present
 
-    - name: Add Docker GPG key
-      shell: |
-        sudo mkdir -p /etc/apt/keyrings
-        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo tee /etc/apt/keyrings/docker.asc > /dev/null
-        sudo chmod a+r /etc/apt/keyrings/docker.asc
-
     - name: Add Docker repository
-      shell: |
-        echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+      command: yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
     - name: Install Docker Engine
-      apt:
+      yum:
         name:
           - docker-ce
           - docker-ce-cli
           - containerd.io
-          - docker-buildx-plugin
           - docker-compose-plugin
         state: present
 
-    - name: Ensure Docker service is running
+    - name: Start and enable Docker service
       service:
         name: docker
         state: started
         enabled: yes
 
     - name: Pull the Docker image from Docker Hub
-      shell: docker pull shahdmohammed/weather-app:latest
+      command: docker pull shahdmohammed/weather-app:latest
 
     - name: Remove old running container (if exists)
-      shell: docker rm -f weather-app || true
+      command: docker rm -f weather-app || true
 
     - name: Run the Docker container
-      shell: |
-        docker run -d --name weather-app -p 5000:5000 shahdmohammed/weather-app:latest
+      command: docker run -d --name weather-app -p 5000:5000 shahdmohammed/weather-app:latest
