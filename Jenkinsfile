@@ -17,7 +17,7 @@ pipeline {
             }
         }
 
-/*        stage('Build Docker Image') {
+        stage('Build Docker Image') {
             steps {
                 script {
                     echo "Building Docker Image..."
@@ -25,7 +25,7 @@ pipeline {
                 }
             }
         }
-*/
+
         stage('Login to Docker Hub') {
             steps {
                 script {
