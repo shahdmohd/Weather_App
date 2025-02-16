@@ -30,8 +30,8 @@ Ensure you have the following installed:
 ```sh
 git clone https://github.com/shahdmohd/weather-app.git
 cd weather-app
-
-### **3️⃣ Jenkins Pipeline Execution**
+```
+### *3️⃣ Jenkins Pipeline Execution*
 
 1. Open Jenkins and navigate to your pipeline.
 2. Run the pipeline to install Docker on two CentOS machines and deploy the application.
