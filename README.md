@@ -20,6 +20,8 @@ This is a simple Flask-based weather application, containerized using **Docker**
 ### **1️⃣ Prerequisites**
 Ensure you have the following installed:
 - Docker  
+- Jenkins  
+- Ansible  
 - Python (if running locally)  
 - Git (optional)
 
