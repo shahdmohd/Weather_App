@@ -1,6 +1,6 @@
 # 🌤 Weather App (Dockerized & Automated with Jenkins)
 
-This is a simple *Flask-based weather application, containerized using **Docker* and deployed using *Jenkins*. The app fetches weather data and displays it in a user-friendly UI.
+This is a simple *Flask*-based weather application, containerized using *Docker* and deployed using *Jenkins*. The app fetches weather data and displays it in a user-friendly UI.
 
 ## 🚀 Features
 - Displays real-time weather information.
