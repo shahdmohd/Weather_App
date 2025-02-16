@@ -13,7 +13,7 @@ This is a simple *Flask-based weather application, containerized using **Docker*
 ## 📸 Screenshots
 | Docker Status | Jenkins Pipeline Success | Browser Access 1 | Browser Access 2 |
 |--------------|-------------------------|------------------|------------------|
-| ![Docker Status](screenshots/docker-status.png) | ![Jenkins Pipeline](screenshots/pipeline.png) | ![Browser 1](screenshots/1st-browser-access.png) | ![Browser 2](screenshots/2nd-browser-access.png) |
+| ![Docker Status](screenshots/docker-containers.png) | ![Jenkins Pipeline](screenshots/pipeline.png) | ![Browser 1](screenshots/1st-browser-access.png) | ![Browser 2](screenshots/2nd-browser-access.png) |
 
 
 ---
