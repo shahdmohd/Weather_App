@@ -43,10 +43,10 @@ cd weather-app
 Once the container is running, access the app via:
 
 ```
-http://<your-ip>:5000
+http://<machine-ip>:5000
 ```
 
-Replace `<your-ip>` with the appropriate IP address.
+Replace `<machine-ip>` with the appropriate IP address.
 
 ---
 
