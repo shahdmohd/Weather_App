@@ -30,3 +30,31 @@ Ensure you have the following installed:
 ```sh
 git clone https://github.com/shahdmohd/weather-app.git
 cd weather-app
+
+### **3️⃣ Jenkins Pipeline Execution**
+
+1. Open Jenkins and navigate to your pipeline.
+2. Run the pipeline to install Docker on two CentOS machines and deploy the application.
+3. Verify that the pipeline completes successfully.
+
+### **5️⃣ Access the Application**
+
+Once the container is running, access the app via:
+
+```
+http://<your-ip>:5000
+```
+
+Replace `<your-ip>` with the appropriate IP address.
+
+---
+
+## 🔧 Troubleshooting
+
+- **If the pipeline fails**, check the Jenkins logs.
+- **If the container does not start**, use:
+  ```sh
+  docker ps -a
+  ```
+  to inspect logs.
+- Ensure **port 5000** is open and accessible.
